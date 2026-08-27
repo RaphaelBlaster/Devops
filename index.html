@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevOps / ex1 / codes.txt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Repository files">
+        <div class="sidebar-heading">
+          <span class="repo-mark" aria-hidden="true">◧</span>
+          <span>Files</span>
+        </div>
+        <div class="branch-row">
+          <button class="branch-select" type="button" aria-label="Current branch">
+            <span class="branch-icon">⑂</span><span>main</span><span class="chevron">⌄</span>
+          </button>
+          <button class="icon-button" type="button" aria-label="Add file">＋</button>
+          <button class="icon-button" type="button" aria-label="Search files">⌕</button>
+        </div>
+        <button class="file-search" type="button"><span>⌕</span><span>Go to file</span><kbd>T</kbd></button>
+        <nav class="tree" aria-label="File tree">
+          <div class="tree-folder"><span class="disclosure">⌄</span><span class="folder-icon">■</span><span>ex1</span></div>
+          <button class="tree-file active" type="button"><span class="file-icon">□</span><span>codes.txt</span></button>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="#">DevOps</a><span>/</span><a href="#">ex1</a><span>/</span><strong>codes.txt</strong><button class="copy-path" type="button" aria-label="Copy file path">▣</button>
+          </div>
+          <button class="more-button" type="button" aria-label="More actions">•••</button>
+        </header>
+
+        <section class="commit-card" aria-label="Latest commit">
+          <div class="commit-author"><span class="avatar">✚</span><strong>Hemanth-Kumar-K213</strong><span>Add ex1 folder</span></div>
+          <div class="commit-meta"><span>52fd7e1 · 3 days ago</span><button type="button" class="history-button"><span>◷</span> History</button></div>
+        </section>
+
+        <section class="file-card" aria-label="File contents">
+          <div class="file-toolbar">
+            <div class="view-tabs"><button class="tab active" type="button">Code</button><button class="tab" type="button">Blame</button><span class="stats">29 lines&nbsp; (13 loc) · 457 Bytes</span></div>
+            <div class="file-actions">
+              <button type="button" aria-label="Open file">▱</button><button type="button" aria-label="View contributors">♙</button><button type="button" class="raw-button">Raw</button><button type="button" aria-label="Copy contents">▣</button><button type="button" aria-label="Download">⇩</button><button type="button" aria-label="Edit">✎</button><button type="button" aria-label="More file actions">⌄</button><button type="button" aria-label="Open source">‹›</button>
+            </div>
+          </div>
+          <div class="code-wrap"><ol class="code-list">
+            <li>On Windows (PowerShell, run as Administrator):</li><li class="blank"></li><li>choco install minikube</li><li class="blank"></li><li>Steps: Deploy Nginx Image as a Pod</li><li class="blank"></li><li>Start a local Kubernetes cluster with Minikube:</li><li class="blank"></li><li>minikube start</li><li class="blank"></li><li class="blank"></li><li>Create your first Pod (using Nginx image):</li><li class="blank"></li><li>kubectl run hello-k8s --image=nginx --port=80</li><li class="blank"></li><li class="blank"></li><li>Verify the Pod is running:</li><li class="blank"></li><li>kubectl get pods</li><li class="blank"></li><li class="blank"></li><li>Expose the Pod as a Service:</li><li class="blank"></li><li>kubectl expose pod hello-k8s --type=NodePort --port=80</li><li class="blank"></li><li class="blank"></li><li>Open the app in your browser:</li><li class="blank"></li><li>minikube service hello-k8s</li>
+          </ol></div>
+        </section>
+      </main>
+    </div>
+    <div class="toast" role="status" aria-live="polite">Copied to clipboard</div>
+    <script src="script.js"></script>
+  </body>
+</html>
