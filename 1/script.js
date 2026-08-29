@@ -1,0 +1,6 @@
+const toast = document.querySelector('.toast');
+const showToast = (message) => { toast.textContent = message; toast.classList.add('show'); window.clearTimeout(showToast.timer); showToast.timer = window.setTimeout(() => toast.classList.remove('show'), 1800); };
+document.querySelector('.copy-path').addEventListener('click', async () => { try { await navigator.clipboard.writeText('DevOps/ex1/codes.txt'); showToast('Path copied to clipboard'); } catch { showToast('Path: DevOps/ex1/codes.txt'); } });
+document.querySelector('[aria-label="Copy contents"]').addEventListener('click', async () => { const contents = [...document.querySelectorAll('.code-list li')].map((line) => line.textContent).join('\n'); try { await navigator.clipboard.writeText(contents); showToast('Contents copied to clipboard'); } catch { showToast('Clipboard unavailable'); } });
+document.querySelector('.raw-button').addEventListener('click', () => showToast('Raw view selected'));
+document.querySelectorAll('.tab').forEach((tab) => tab.addEventListener('click', () => { document.querySelectorAll('.tab').forEach((item) => item.classList.remove('active')); tab.classList.add('active'); showToast(`${tab.textContent} view selected`); }));
