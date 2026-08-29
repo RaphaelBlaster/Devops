@@ -54,6 +54,11 @@
             <li>On Windows (PowerShell, run as Administrator):</li><li class="blank"></li><li>choco install minikube</li><li class="blank"></li><li>Steps: Deploy Nginx Image as a Pod</li><li class="blank"></li><li>Start a local Kubernetes cluster with Minikube:</li><li class="blank"></li><li>minikube start</li><li class="blank"></li><li class="blank"></li><li>Create your first Pod (using Nginx image):</li><li class="blank"></li><li>kubectl run hello-k8s --image=nginx --port=80</li><li class="blank"></li><li class="blank"></li><li>Verify the Pod is running:</li><li class="blank"></li><li>kubectl get pods</li><li class="blank"></li><li class="blank"></li><li>Expose the Pod as a Service:</li><li class="blank"></li><li>kubectl expose pod hello-k8s --type=NodePort --port=80</li><li class="blank"></li><li class="blank"></li><li>Open the app in your browser:</li><li class="blank"></li><li>minikube service hello-k8s</li>
           </ol></div>
         </section>
+        <section class="assignment-panel" aria-labelledby="assignment-title">
+          <div class="assignment-heading"><div><p class="eyebrow">Assignment 1 · Live CRUD</p><h1 id="assignment-title">Deployment tasks</h1><p class="panel-copy">Create, update, and track the steps for your containerized deployment.</p></div><span class="service-pill"><span></span> API connected</span></div>
+          <form id="item-form" class="item-form"><input type="hidden" id="item-id"><label>Task name<input id="item-name" required maxlength="120" placeholder="e.g. Build the application image"></label><label>Description<input id="item-description" maxlength="500" placeholder="What needs to happen?"></label><label>Status<select id="item-status"><option value="todo">To do</option><option value="in-progress">In progress</option><option value="done">Done</option></select></label><div class="form-actions"><button class="primary-action" type="submit">Add task</button><button class="secondary-action" id="cancel-edit" type="button" hidden>Cancel</button></div></form>
+          <div id="items-list" class="items-list" aria-live="polite"><p class="empty-state">Loading tasks…</p></div>
+        </section>
       </main>
     </div>
     <div class="toast" role="status" aria-live="polite">Copied to clipboard</div>
