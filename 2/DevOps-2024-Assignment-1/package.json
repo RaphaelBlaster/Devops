@@ -1,0 +1,22 @@
+{
+  "name": "devops-2024-assignment-1",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dockerized multi-container CRUD web application for DevOps Assignment 1",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "network": "node scripts/network.js",
+    "containers": "node scripts/containers.js",
+    "health-monitor": "node scripts/containers.js --monitor"
+  },
+  "dependencies": {
+    "dockerode": "^4.0.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
