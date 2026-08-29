@@ -7,7 +7,7 @@ async function inspectApp() {
   const container = docker.getContainer(appName);
   const info = await container.inspect();
   const health = info.State.Health?.Status || (info.State.Running ? 'running' : 'stopped');
-  console.log(`${info.Name.replace(/^\\//, '')}: ${info.State.Status} (${health})`);
+  console.log(`${info.Name.replace(/^\//, '')}: ${info.State.Status} (${health})`);
   if (health === 'unhealthy') { console.log('App is unhealthy; restarting container.'); await container.restart(); }
 }
 async function main() {
